@@ -21,7 +21,7 @@ public class Stack {
     }
 
     boolean isArrayFull (){
-        return index == array.length - 1; // Will return true or false value
+        return index == array.length - 1; // Will return true or false boolean value
     }
     boolean isArrayOnStartIndex (){
         return index <= 0;
