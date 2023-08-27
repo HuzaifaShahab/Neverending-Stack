@@ -1,6 +1,6 @@
 public class Stack {
     int [] array ; // Instance Variable
-    int index = 3 ;
+    int index = -1 ;
 
     Stack (int length){ // Giving Array Length through parametrized Constructor-
         array = new int[length] ;
