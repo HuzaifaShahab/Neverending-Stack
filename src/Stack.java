@@ -2,7 +2,7 @@ public class Stack {
     int [] array ; // Instance Variable
     int index = 3 ;
 
-    Stack (int length){ // Giving Array Length through parametrized Constructor
+    Stack (int length){ // Giving Array Length through parametrized Constructor-
         array = new int[length] ;
         System.out.println("Array Length : "+array.length);
     }
