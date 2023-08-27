@@ -16,7 +16,7 @@ public class Stack {
         else{
             index += 1 ;
             array[index] = element ;
-            return index ; // Will return the current index
+            return index ; // Will return the present index
         }
     }
 
