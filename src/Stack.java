@@ -14,12 +14,12 @@ public class Stack {
         else{
             index += 1 ;
             array[index] = element ;
-            return index ; // Will return the present index
+            return element ; // Will return the present index
         }
     }
 
     int pop (int ind){
-        if (index < 0) return -1 ;
+        if (isArrayEmpty()) return -1 ;
         else{
             int value = array[ind] ;
             index -= 1 ;
@@ -27,17 +27,16 @@ public class Stack {
         }
     }
 
-    boolean isArrayFull (){
-        return index == array.length - 1; // Will return true or false boolean value
-    }
-    boolean isArrayOnStartIndex (){
-        return index <= 0;
-    }
+    boolean isArrayFull (){ return index == array.length - 1; }// Will return true or false boolean value
+
+    boolean isArrayOnStartIndex (){ return index <= 0; }
+
+    boolean isArrayEmpty ()  { return index < 0 ; }
 
     void displayArray (){
         System.out.println("Final Array Values ! ");
-        for (int i=0;i<=index;i++){
-            System.out.print(array[i]+" ");
-        }
+            for (int i=0;i<=index;i++){
+                System.out.print(array[i]+" ");
+            }
     }
 }
