@@ -14,10 +14,9 @@ public class Main {
                 int element = sc.nextInt() ;
                 int retValue = st.push(element) ;
                      if (retValue == -1){
-                         System.out.println("Array Is Already Full");
                          break ;
                      }
-                     else {System.out.println("Element successfully pushed at index : "+retValue);
+                     else {System.out.println(retValue+ " successfully pushed");
                            st.displayArray();}
         }
 
