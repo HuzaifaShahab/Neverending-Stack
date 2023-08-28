@@ -2,13 +2,14 @@ public class Stack {
     int [] array ; // Instance Variable
     int index = -1 ;
 
-    Stack (int length){ // Giving Array Length through parametrized Constructor-
+    Stack (int length){   //Giving Array Length through parametrized Constructor-
         array = new int[length] ;
         System.out.println("Array Length : "+array.length);
     }
 
     int push (int element){
         if(isArrayFull()){
+            System.out.println("Array Is Full");
             return -1;
         }
         else{
@@ -17,10 +18,22 @@ public class Stack {
         }
     }
 
-    int pop (int ind){
-        if (isArrayEmpty()) return -1 ;
+    int pop (int index){
+        if (isArrayEmpty()) {
+            System.out.println("Array Is Empty!");
+            return -1 ; }
         else{
             return array[index--] ;
+        }
+    }
+
+    int peak (int index) {
+        if(isArrayEmpty()){
+            System.out.println("Array Is Empty");
+            return -1 ;
+        }
+        else {
+            return array[index] ;
         }
     }
 
