@@ -9,9 +9,7 @@ public class Stack {
 
     int push (int element){
         if(isArrayFull()){
-            System.out.println("Array Is Already Full");
-            System.exit(0);
-            return 0;
+            return -1;
         }
         else{
             index += 1 ;
@@ -20,10 +18,26 @@ public class Stack {
         }
     }
 
+    int pop (int ind){
+        if (index < 0) return -1 ;
+        else{
+            int value = array[ind] ;
+            index -= 1 ;
+            return value ;
+        }
+    }
+
     boolean isArrayFull (){
         return index == array.length - 1; // Will return true or false boolean value
     }
     boolean isArrayOnStartIndex (){
         return index <= 0;
+    }
+
+    void displayArray (){
+        System.out.println("Final Array Values ! ");
+        for (int i=0;i<=index;i++){
+            System.out.print(array[i]+" ");
+        }
     }
 }
