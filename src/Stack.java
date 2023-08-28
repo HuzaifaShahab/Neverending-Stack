@@ -12,22 +12,19 @@ public class Stack {
             return -1;
         }
         else{
-            index += 1 ;
-            array[index] = element ;
-            return element ; // Will return the present index
+            array[index++] = element ;
+            return element ; // Will return the push value
         }
     }
 
     int pop (int ind){
         if (isArrayEmpty()) return -1 ;
         else{
-            int value = array[ind] ;
-            index -= 1 ;
-            return value ;
+            return array[index--] ;
         }
     }
 
-    boolean isArrayFull (){ return index == array.length - 1; }// Will return true or false boolean value
+    boolean isArrayFull (){ return index == array.length - 1; } // Will return true or false boolean value
 
     boolean isArrayOnStartIndex (){ return index <= 0; }
 
