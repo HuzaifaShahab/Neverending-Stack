@@ -6,13 +6,27 @@ public class Main {
         System.out.println("Set Array Length");
         int length = sc.nextInt() ;
         Stack st = new Stack(length) ;
-        System.out.println("How many elements you want to push");
+        System.out.println("How many elements you want to push ?");
         int countPush = sc.nextInt() ;
 
         for (int i=0 ; i<countPush; i++){
             System.out.print("Input Element at index : "+(i+1)+" : ");
-            int element = sc.nextInt() ;
-            System.out.println("Element Successfully Pushed at Index : "+st.push(element)) ;
+                int element = sc.nextInt() ;
+                int retValue = st.push(element) ;
+                     if (retValue == -1){
+                         System.out.println("Array Is Already Full");
+                         break ;
+                     }
+                     else {System.out.println("Element successfully pushed at index : "+retValue);
+                           st.displayArray();}
         }
+
+        System.out.println();
+        System.out.println("Which index-value you want to pop out ?");
+            int ind = sc.nextInt() ;
+            int retValue = st.pop(ind) ;
+                if (retValue==-1) System.out.println("Array Is Empty");
+                else {System.out.println(retValue+" Successfully (POP-OUT)");
+                      st.displayArray();}
     }
 }
