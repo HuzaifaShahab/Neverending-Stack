@@ -13,17 +13,19 @@ public class Stack {
             return -1;
         }
         else{
-            array[index++] = element ;
+            array[++index] = element ;
             return element ; // Will return the push value
         }
     }
 
-    int pop (int index){
+    int pop (int ind){
         if (isArrayEmpty()) {
             System.out.println("Array Is Empty!");
             return -1 ; }
         else{
-            return array[index--] ;
+            int value = array[ind] ;
+            index-- ;
+            return value ;
         }
     }
 
