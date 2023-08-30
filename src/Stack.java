@@ -7,17 +7,6 @@ public class Stack {
         System.out.println("Array Length : "+array.length);
     }
 
-    int push (int element){
-        if(isArrayFull()){
-            System.out.println("Array Is Full");
-            return -1;
-        }
-        else{
-            array[++index] = element ;
-            return element ; // Will return the push value
-        }
-    }
-
     int pop (int ind){
         if (isArrayEmpty()) {
             System.out.println("Array Is Empty!");
@@ -29,7 +18,17 @@ public class Stack {
         }
     }
 
-    int peak (int index) {
+    int push (int element){
+        if(isArrayFull()){
+            System.out.println("Array Is Full");
+            return -1;
+        }
+        else{
+            return array[++index]  ; // Will return the push value
+        }
+    }
+
+    int peak () {
         if(isArrayEmpty()){
             System.out.println("Array Is Empty");
             return -1 ;
@@ -40,8 +39,6 @@ public class Stack {
     }
 
     boolean isArrayFull (){ return index == array.length - 1; } // Will return true or false boolean value
-
-    boolean isArrayOnStartIndex (){ return index <= 0; }
 
     boolean isArrayEmpty ()  { return index < 0 ; }
 
