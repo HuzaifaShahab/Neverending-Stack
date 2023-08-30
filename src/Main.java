@@ -23,12 +23,12 @@ public class Main {
 
         System.out.println();
         System.out.println("How many elements you want to pop out ?");
-        int countPop = sc.nextInt();
+             int countPop = sc.nextInt();
 
         for (int i = 0; i < countPop; i++) {
             System.out.print("Input " + (i + 1) + " element to pop out : ");
-            int element = sc.nextInt();
-            int retValue = st.pop(element);
+             int element = sc.nextInt();
+             int retValue = st.pop(element);
             if (retValue == -1) {
                 break;
             } else {
@@ -38,8 +38,7 @@ public class Main {
             }
         }
         System.out.println("Do you want to see element at peak");
-            int peak = sc.nextInt() ;
-            System.out.println(st.peak(peak)+" is at peak now");
+            System.out.println(st.peak()+" is at peak now");
 
     }
 }
