@@ -20,7 +20,6 @@ public class Main {
                 st.displayArray();
             }
         }
-
         System.out.println();
         System.out.println("How many elements you want to pop out ?");
              int countPop = sc.nextInt();
@@ -39,6 +38,5 @@ public class Main {
         }
         System.out.println("Do you want to see element at peak");
             System.out.println(st.peak()+" is at peak now");
-
     }
 }
