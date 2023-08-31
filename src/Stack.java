@@ -24,7 +24,7 @@ public class Stack {
             return -1;
         }
         else{
-            return array[++index]  ; // Will return the push value
+            return array[++index] = element  ; // Will return the push value
         }
     }
 
